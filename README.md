@@ -1,30 +1,28 @@
-# lily-ps.github.io
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fieldwork Notes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fieldwork Diary</title>
+
   <style>
     body {
       margin: 0;
-      background: #f5f5f5;
-      color: #222;
+      background: #f4f4f4;
       font-family: Georgia, "Times New Roman", serif;
+      color: #222;
     }
 
     .page {
       max-width: 900px;
       margin: 0 auto;
       background: white;
-      min-height: 100vh;
     }
 
     .hero {
       width: 100%;
       height: 420px;
       object-fit: cover;
-      display: block;
     }
 
     .content {
@@ -34,9 +32,9 @@
     }
 
     h1 {
-      font-size: 2.8rem;
-      line-height: 1.15;
-      margin: 0 0 12px;
+      font-size: 2.6rem;
+      margin-bottom: 10px;
+      line-height: 1.2;
     }
 
     .subtitle {
@@ -52,29 +50,27 @@
       margin-bottom: 30px;
     }
 
-    .summary-box {
-      background: #f2f2f2;
-      border-left: 4px solid #999;
-      padding: 18px 20px;
+    .summary {
+      background: #f1f1f1;
+      border-left: 4px solid #888;
+      padding: 16px;
       margin: 30px 0;
       border-radius: 6px;
       font-family: Arial, sans-serif;
     }
 
     h2 {
-      margin-top: 42px;
-      margin-bottom: 14px;
-      font-size: 1.55rem;
+      margin-top: 40px;
+      font-size: 1.5rem;
     }
 
     p {
       font-size: 1.08rem;
-      line-height: 1.85;
-      margin-bottom: 18px;
+      line-height: 1.8;
     }
 
     .updates {
-      margin-top: 48px;
+      margin-top: 50px;
     }
 
     .update {
@@ -82,16 +78,16 @@
       padding: 20px 0;
     }
 
-    .update-date {
-      font-family: Arial, sans-serif;
+    .date {
       font-size: 0.9rem;
       color: #777;
-      margin-bottom: 8px;
+      margin-bottom: 6px;
+      font-family: Arial, sans-serif;
     }
 
     .footer {
       margin-top: 50px;
-      padding-top: 24px;
+      padding-top: 20px;
       border-top: 1px solid #ddd;
       font-family: Arial, sans-serif;
       font-size: 0.95rem;
@@ -99,97 +95,100 @@
     }
 
     @media (max-width: 700px) {
-      h1 {
-        font-size: 2.1rem;
-      }
-
       .hero {
         height: 260px;
       }
-
-      .content {
-        padding: 28px 18px 40px;
+      h1 {
+        font-size: 2rem;
       }
     }
   </style>
 </head>
+
 <body>
-  <div class="page">
 
-    <img src="photo.jpg" alt="Fieldwork site" class="hero">
+<div class="page">
 
-    <div class="content">
-      <h1>Why I’m Doing Fieldwork in [Place]</h1>
+  <!-- OPTIONAL IMAGE: remove this line if you don't have a photo -->
+  <img src="photo.jpg" class="hero" alt="Fieldwork">
 
-      <div class="subtitle">
-        A public diary of my PhD fieldwork and the questions I’m exploring.
-      </div>
+  <div class="content">
 
-      <div class="meta">
-        By [Your Name] · March 2026 · [City, Country]
-      </div>
+    <h1>Coastal Rewilding, Data, and AI</h1>
 
-      <div class="summary-box">
-        <strong>Summary</strong>
+    <div class="subtitle">
+      Using data integration and AI to better understand coastal and estuarine systems.
+    </div>
+
+    <div class="meta">
+      PhD Research · Nantes University & University of Southern Denmark
+    </div>
+
+    <div class="summary">
+      <strong>Summary</strong>
+      <p>
+        I am a PhD student researching coastal rewilding, focusing on how data integration and AI can help us better understand and support coastal and estuarine systems.
+      </p>
+    </div>
+
+    <h2>What I’m studying</h2>
+    <p>
+      I am a PhD student working on coastal rewilding, with a focus on how data integration and AI can help us better understand and manage coastal and estuarine systems.
+    </p>
+
+    <p>
+      My PhD is a cotutelle between Nantes University (France) and the University of Southern Denmark, supervised by Prof. Dr Vona Méléder, Dr Cintia Organo Quintana, and Dr Parisa Niloofar.
+    </p>
+
+    <h2>Why this matters</h2>
+    <p>
+      Coastal ecosystems are under increasing pressure from climate change, human activity, and biodiversity loss. Rewilding offers a way to restore these systems, but doing so requires better ways of combining and understanding complex environmental data.
+    </p>
+
+    <p>
+      My research explores how we can use existing data more effectively to support decision-making, while keeping methods transparent, interpretable, and grounded in real-world needs.
+    </p>
+
+    <h2>What I do in practice</h2>
+    <p>
+      I work with environmental and Earth observation datasets, combining spatial analysis and machine learning to study coastal and estuarine environments.
+    </p>
+
+    <p>
+      Rather than focusing only on complex models, I prioritise data integration, clarity, and producing outputs that are useful for researchers, practitioners, and decision-makers.
+    </p>
+
+    <h2>My approach</h2>
+    <p>
+      Before starting my PhD, I worked as a data steward supporting the REWRITE project, focusing on data infrastructure, documentation, governance, and FAIR principles.
+    </p>
+
+    <p>
+      This experience shaped how I approach research: I emphasise well-structured data, reproducible workflows, and the responsible use of AI.
+    </p>
+
+    <p>
+      I am particularly interested in open data, transparency, and making analytical processes understandable and reusable.
+    </p>
+
+    <div class="updates">
+      <h2>Updates from the field</h2>
+
+      <div class="update">
+        <div class="date">March 2026</div>
         <p>
-          I’m a PhD student studying [your topic]. This fieldwork helps me understand
-          [main question] and why it matters for people beyond academia.
+          Preparing for fieldwork and refining how data integration approaches can support coastal rewilding efforts.
         </p>
       </div>
 
-      <p>
-        This page is a public record of my planned fieldwork. I want it to help people
-        follow what I am doing, while also making my research easier to understand.
-      </p>
-
-      <h2>What I’m studying</h2>
-      <p>
-        I study [describe your topic in simple language].
-      </p>
-
-      <h2>Why this matters</h2>
-      <p>
-        This matters because [explain why the public should care].
-      </p>
-
-      <h2>What I’ll be doing in the field</h2>
-      <p>
-        During this trip, I’ll be [interviewing / observing / visiting archives /
-        meeting local organizations / collecting data].
-      </p>
-
-      <h2>Questions I’m exploring</h2>
-      <p>
-        I’m especially interested in:
-      </p>
-      <p>
-        – How does [question 1]?<br>
-        – Why does [question 2]?<br>
-        – What happens when [question 3]?
-      </p>
-
-      <div class="updates">
-        <h2>Updates from the field</h2>
-
-        <div class="update">
-          <div class="update-date">March 26, 2026</div>
-          <p>
-            I’m preparing for fieldwork and refining the main questions I want to ask.
-          </p>
-        </div>
-
-        <div class="update">
-          <div class="update-date">April 2, 2026</div>
-          <p>
-            My first week will focus on [activity]. I’m especially curious about [theme].
-          </p>
-        </div>
-      </div>
-
-      <div class="footer">
-        Contact: yourname@email.com
-      </div>
     </div>
+
+    <div class="footer">
+      Contact: your@email.com
+    </div>
+
   </div>
+</div>
+
 </body>
 </html>
