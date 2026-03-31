@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Training | Lily Puspasari</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #fafafa;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #222;
+      font-size: 15px;
+    }
+
+    .topnav {
+      background: #111;
+      color: white;
+      padding: 12px 20px;
+      font-size: 15px;
+    }
+
+    .topnav a {
+      color: white;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    .topnav a:hover {
+      text-decoration: underline;
+    }
+
+    .layout {
+      display: flex;
+      max-width: 1200px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 270px;
+      background: #f4f4f4;
+      border-right: 1px solid #e2e2e2;
+      padding: 26px 22px;
+      box-sizing: border-box;
+    }
+
+    .sidebar h2 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 16px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #222;
+      text-decoration: none;
+      font-size: 14px;
+      padding: 7px 0;
+      line-height: 1.4;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .sidebar .sub {
+      padding-left: 14px;
+      font-size: 13px;
+      color: #444;
+    }
+
+    .content {
+      flex: 1;
+      padding: 38px 42px;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      font-size: 16px;
+      margin-top: 0;
+      margin-bottom: 8px;
+    }
+
+    h2 {
+      font-size: 16px;
+      margin-top: 34px;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 15px;
+      margin-top: 24px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
+    ul {
+      font-size: 15px;
+      line-height: 1.7;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .intro {
+      color: #555;
+      margin-bottom: 24px;
+    }
+
+    .box {
+      background: #f7f7f7;
+      border-left: 4px solid #999;
+      padding: 14px 16px;
+      margin: 18px 0;
+      border-radius: 6px;
+    }
+
+    .footer-note {
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid #ddd;
+      color: #666;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      .layout {
+        flex-direction: column;
+      }
+
+      .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e2e2e2;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topnav">
+    <a href="index.html">Home</a>
+    <a href="data-training.html">Data Training</a>
+  </div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Data Training</h2>
+      <a href="#welcome">Welcome</a>
+      <a href="#about-open-science">1. About Open Science</a>
+      <a href="#general-data">2. General Data</a>
+      <a href="#natural-science">3. Natural Science</a>
+      <a class="sub" href="#ocean-data">3.1. Ocean Data</a>
+      <a class="sub" href="#climate-data">3.2. Climate Data</a>
+      <a class="sub" href="#carbon-data">3.3. Carbon Data</a>
+      <a href="#social-science-data">4. Social Science Data</a>
+      <a class="sub" href="#interview-data">4.1. Interview Data</a>
+      <a class="sub" href="#sensitive-data">4.2. Sensitive Data</a>
+      <a class="sub" href="#pseudonym">4.3. Pseudonym</a>
+      <a class="sub" href="#anonym">4.4. Anonym</a>
+    </aside>
+
+    <main class="content">
+      <h1 id="welcome">Welcome</h1>
+      <p class="intro">
+        Welcome to this Data Training page. This space gathers simple notes and training material on open science, research data management, and data practices across different disciplines. It is designed as a practical starting point rather than a complete handbook.
+      </p>
+
+      <div class="box">
+        The aim is to make data work more organised, transparent, reusable, and easier to understand for yourself and for others.
+      </div>
+
+      <h2 id="about-open-science">1. About Open Science</h2>
+      <p>
+        Open Science is an approach that aims to make research processes and outputs more transparent, accessible, and reusable. It includes practices such as sharing code, documenting workflows, publishing data when possible, and improving reproducibility.
+      </p>
+      <p>
+        In practice, Open Science does not mean that everything must always be fully open. A more useful principle is: as open as possible, as closed as necessary.
+      </p>
+
+      <h2 id="general-data">2. General Data</h2>
+      <p>
+        Good data practice starts with simple habits: clear file naming, consistent folder structures, documentation, version control, and early thinking about future reuse. These basic steps are helpful in nearly every discipline.
+      </p>
+      <ul>
+        <li>Separate raw and processed data.</li>
+        <li>Keep a short README file.</li>
+        <li>Use non-proprietary formats when possible.</li>
+        <li>Document methods and important decisions.</li>
+        <li>Think about storage, backup, and access.</li>
+      </ul>
+
+      <h2 id="natural-science">3. Natural Science</h2>
+      <p>
+        Natural science data often involve measurements, spatial information, time series, sensors, or monitoring programs. These data are usually easier to standardise, but they still need careful documentation, metadata, and quality control.
+      </p>
+
+      <h3 id="ocean-data">3.1. Ocean Data</h3>
+      <p>
+        Ocean data may include salinity, temperature, sea level, nutrient concentrations, biodiversity observations, bathymetry, and remote sensing products. Important considerations include spatial resolution, temporal coverage, calibration, and metadata standards.
+      </p>
+
+      <h3 id="climate-data">3.2. Climate Data</h3>
+      <p>
+        Climate data are often large, model-based, or long-term observational datasets. Key issues include units, uncertainty, spatial and temporal scales, scenario assumptions, and reproducibility of preprocessing steps.
+      </p>
+
+      <h3 id="carbon-data">3.3. Carbon Data</h3>
+      <p>
+        Carbon data may refer to carbon stocks, carbon fluxes, emissions, sequestration estimates, or blue carbon assessments. These datasets often combine field observations, models, and literature values, so transparency about methods and assumptions is especially important.
+      </p>
+
+      <h2 id="social-science-data">4. Social Science Data</h2>
+      <p>
+        Social science data often involve people directly, which means data management must include ethics, consent, privacy, and access control. Documentation remains important, but legal and ethical dimensions become even more central.
+      </p>
+
+      <h3 id="interview-data">4.1. Interview Data</h3>
+      <p>
+        Interview data may include audio recordings, transcripts, notes, and coded materials. Important questions include: was consent obtained, how are files stored, who has access, and what can be shared later?
+      </p>
+
+      <h3 id="sensitive-data">4.2. Sensitive Data</h3>
+      <p>
+        Sensitive data include any information that could cause harm if disclosed, such as health, political, personal, financial, or identifiable information. These data usually require stricter access control, secure storage, and careful sharing decisions.
+      </p>
+
+      <h3 id="pseudonym">4.3. Pseudonym</h3>
+      <p>
+        Pseudonymisation means replacing direct identifiers with codes or alternative names, while keeping a key somewhere secure. This reduces risk, but the data may still be re-identifiable if the key exists or if there is enough contextual information.
+      </p>
+
+      <h3 id="anonym">4.4. Anonym</h3>
+      <p>
+        Anonymisation means removing or changing information so that individuals can no longer be identified. True anonymisation is difficult, especially in small datasets or detailed qualitative work, so it should be approached carefully.
+      </p>
+
+      <div class="footer-note">
+        This page is a growing resource and can be expanded over time with examples, templates, and training materials.
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
