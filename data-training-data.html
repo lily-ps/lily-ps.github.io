@@ -212,15 +212,18 @@ T1   T2   T3
 
     <strong>Good</strong>
        <div class="box">
-temperature_20241210.csv
+20231210_temperature.csv
 time_min, temperature_C
 0, 22.1
 10, 23.5
    </div>
     <p>
-      Then, add a README.txt : 
-This is temperature measured every 10 minutes in °C.
-Now anyone can use it.</p>
+      Then, add a short explanation into the README.txt : </p>
+      <div class="box">
+        README.txt 
+This dataset contains temperature measurements collected in the Loire Estuary using a temperature sensor. 
+        Measurements were recorded every 10 minutes in degrees Celsius (°C).
+Now anyone can use it.</div>
 
     <p><strong>If you have many files</strong>
 Example of how to structure the folder:</p>
@@ -236,7 +239,7 @@ Example of how to structure the folder:</p>
     <h2 id="file-name">File name</h2>
 
     <p>A meaningful file naming is really helpful to make others follow your process and your work. Example of a good practice of naming files are:</p>
-
+   <div class="box">
     <ol>
       <li>A maximum of 25 characters should be used for file names.</li>
       <li>Accents, symbols, special characters, and spaces are to be excluded.</li>
@@ -252,7 +255,7 @@ Example of how to structure the folder:</p>
       <li>Project number, name, or code.</li>
       <li>Avoid terms such as "draft" or "final".</li>
     </ul>
-
+</div>
     <p>Example:
 20231210_temperature_v3.pdf
 Underscores are more interoperable. They are easier for machines to read and process, while spaces often create errors.</p>
@@ -423,11 +426,13 @@ Temperature measured at 1m height</p>
 │   └── README.md
 └── results/</pre>
 
-    <p>Inside README.md:
+     <div class="box"> 
+       Add a note inside README.txt:
 Run analysis.py using Python 3.10
 Install dependencies from requirements.txt
-One rule:
-If someone cannot run your code and obtain the same result, it is not ready to share.</p>
+       
+Remember:
+If someone cannot run your code and obtain the same result, it is not ready to share.</div>
 
 
 
