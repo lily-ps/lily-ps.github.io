@@ -3,9 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Data Training | General Data </title>
+  <title>Data Training | General Data</title>
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       background: #fafafa;
@@ -46,6 +50,7 @@
       border-right: 1px solid #e2e2e2;
       padding: 24px 20px;
       box-sizing: border-box;
+      flex-shrink: 0;
     }
 
     .sidebar h2 {
@@ -67,25 +72,17 @@
       text-decoration: underline;
     }
 
-    .sidebar a.active {
-      font-weight: bold;
-    }
-
-    .sidebar .sub {
-      padding-left: 14px;
-      font-size: 13px;
-    }
-
     .content {
       flex: 1;
       padding: 36px 40px;
       box-sizing: border-box;
+      min-width: 0;
     }
 
     h1 {
       font-size: 16px;
-      margin-bottom: 12px;
       margin-top: 0;
+      margin-bottom: 12px;
     }
 
     h2 {
@@ -100,28 +97,51 @@
       white-space: pre-line;
     }
 
-    .box {
+    ul, ol {
+      line-height: 1.7;
+      margin-top: 0;
+      margin-bottom: 14px;
+      padding-left: 22px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    pre {
       background: #f7f7f7;
-      border-left: 4px solid #999;
-      padding: 14px;
-      margin: 20px 0;
+      border: 1px solid #e2e2e2;
       border-radius: 6px;
+      padding: 14px;
+      overflow-x: auto;
+      font-size: 14px;
+      line-height: 1.6;
+      white-space: pre-wrap;
     }
 
-    .resource-link {
-      display: inline-block;
-      margin: 6px 0 12px 0;
-      color: #000;
-      font-weight: bold;
-      text-decoration: none;
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0 20px 0;
+      font-size: 14px;
     }
 
-    .resource-link:hover {
-      text-decoration: underline;
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px 10px;
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.5;
     }
 
-    .references p {
-      margin-bottom: 8px;
+    th {
+      background: #f0f0f0;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 28px 0;
     }
 
     @media (max-width: 850px) {
@@ -147,208 +167,280 @@
 
 <div class="layout">
 
-<aside class="sidebar">
-  <h2>Data Training</h2>
-  <a href="data-training-welcome.html">1. Welcome</a>
-  <a href="data-training-open-science.html">2. About Open Science</a>
-  <a href="data-training-general-data.html#good-data">3. What Good Data Looks Like</a>
-  <a href="data-training-general-data.html#format">4. The Data</a>
-  <a href="data-training-general-data.html#file-name">5. Metadata</a>
-  <a href="data-training-general-data.html#metadata">6. README</a>
-  <a href="data-training-general-data.html#repository">7. License</a>
-  <a href="data-training-general-data.html#repository">8. Repository</a>
-  <a href="data-training-general-data.html#questions">9. Any Question?</a>
-</aside>
-  
-<h2 id="good-data">What Good Data Looks Like</h2>
+  <aside class="sidebar">
+    <h2>Data Training</h2>
+    <a href="data-training-welcome.html">1. Welcome</a>
+    <a href="data-training-open-science.html">2. About Open Science</a>
+    <a href="#good-data">3. What Good Data Looks Like</a>
+    <a href="#data">4. The Data</a>
+    <a href="#metadata">5. Metadata</a>
+    <a href="#readme">6. README</a>
+    <a href="#license">7. License</a>
+    <a href="#repository">8. Repository</a>
+    <a href="#questions">9. Any Question?</a>
+  </aside>
 
-<p>
-What Good Data Looks Like<br>
+  <main class="content">
+
+    <h1>General Data</h1>
+
+    <h2 id="good-data">What Good Data Looks Like</h2>
+
+    <p>What Good Data Looks Like
 It is often said that data should be “FAIR.” But for many researchers, this remains abstract. What does FAIR data actually look like in practice?
-An ideal dataset is not defined by its size or discipline. It is defined by whether someone else can understand and reuse it without needing to contact its author.
-</p>
+An ideal dataset is not defined by its size or discipline. It is defined by whether someone else can understand and reuse it without needing to contact its author.</p>
 
-<p>
-This is the quick test:<br>
-Could your future self, or a colleague in another lab, make sense of your data in five years?
-</p>
+    <p>This is the quick test:
+Could your future self, or a colleague in another lab, make sense of your data in five years?</p>
 
-<p>
-Here is an ideal dataset to publish or deposit:
-</p>
+    <p>Here is an ideal dataset to publish or deposit:</p>
 
-<ol>
-  <li>the data</li>
-  <li>the metadata (embedded if possible, or provided separately)</li>
-  <li>a README</li>
-  <li>code (if relevant)</li>
-  <li>a license</li>
-</ol>
+    <ol>
+      <li>the data</li>
+      <li>the metadata (embedded if possible, or provided separately)</li>
+      <li>a README</li>
+      <li>code (if relevant)</li>
+      <li>a license</li>
+    </ol>
 
-<hr>
+    <hr>
 
-<h2 id="data">1. The Data</h2>
+    <h2 id="data">1. The Data</h2>
 
-<p><strong>Example</strong></p>
+    <p><strong>Example</strong></p>
 
-<p><strong>Bad</strong><br>
-data_final.xlsx<br>
-T1   T2   T3<br>
-No one knows what this means.
-</p>
+    <p><strong>Bad</strong>
+data_final.xlsx
+T1   T2   T3
+No one knows what this means.</p>
 
-<p><strong>Good</strong><br>
-temperature_20241210.csv<br>
-time_min, temperature_C<br>
-0, 22.1<br>
+    <p><strong>Good</strong>
+temperature_20241210.csv
+time_min, temperature_C
+0, 22.1
 10, 23.5
-</p>
+• one short file:
+README.txt
+This is temperature measured every 10 minutes in °C.
+Now anyone can use it.</p>
 
-<ul>
-  <li>one short file:</li>
-</ul>
+    <p><strong>If you have many files</strong>
+Example of how to structure the folder:</p>
 
-<p>
-README.txt<br>
-This is temperature measured every 10 minutes in °C.<br>
-Now anyone can use it.
-</p>
-
-<p><strong>If you have many files</strong></p>
-
-<p>Example of how to structure the folder:</p>
-
-<pre>
-Loire_Estuary/
+    <pre>Loire_Estuary/
 │
 ├── Field_data/
 ├── Code/
-└── Notes/
-</pre>
+└── Notes/</pre>
 
-<p>Keep it simple, but do not mix everything in one place.</p>
+    <p>Keep it simple, but do not mix everything in one place.</p>
 
----
+    <h2 id="file-name">File names</h2>
 
-<h2 id="file-name">File names</h2>
+    <p>A meaningful file naming is really helpful to make others follow your process and your work. Example of a good practice of naming files are:</p>
 
-<ul>
-  <li>A maximum of 25 characters should be used for file names.</li>
-  <li>Accents, symbols, special characters, and spaces are to be excluded.</li>
-  <li>The file name is separated by underscore “_” and not space “ ”.</li>
-  <li>The structure is to follow a logical order:</li>
-</ul>
+    <ol>
+      <li>A maximum of 25 characters should be used for file names.</li>
+      <li>Accents, symbols, special characters, and spaces are to be excluded.</li>
+      <li>The file name is separated by underscore “_” and not space “ ”.</li>
+      <li>The structure is to follow a logical order:</li>
+    </ol>
 
-<ul>
-  <li>Creation date: YYYYMMDD</li>
-  <li>Content description</li>
-  <li>Version</li>
-  <li>Name or initials</li>
-  <li>Project number, name, or code</li>
-  <li>Avoid terms such as "draft" or "final"</li>
-</ul>
+    <ul>
+      <li>Creation date: formatted as YYYYMMDD.</li>
+      <li>Content description.</li>
+      <li>Version.</li>
+      <li>Name or initials of creator.</li>
+      <li>Project number, name, or code.</li>
+      <li>Avoid terms such as "draft" or "final".</li>
+    </ul>
 
-<p><strong>Example:</strong><br>
+    <p>Example:
 temperature_20241210_v3.pdf
-</p>
+Underscores are more interoperable. They are easier for machines to read and process, while spaces often create errors.</p>
 
-<p>
-Underscores are more interoperable. They are easier for machines to read and process, while spaces often create errors.
-</p>
+    <h2 id="format">Format</h2>
 
----
+    <p>Example of open formats:</p>
 
-<h2 id="format">Format</h2>
+    <table>
+      <tr>
+        <th>If you have…</th>
+        <th>Use this (recommended)</th>
+        <th>Avoid when possible</th>
+      </tr>
+      <tr>
+        <td>Tables / data</td>
+        <td>.csv, .tsv</td>
+        <td>.xlsx only</td>
+      </tr>
+      <tr>
+        <td>Text / notes</td>
+        <td>.txt, .md, .xml</td>
+        <td>.docx only</td>
+      </tr>
+      <tr>
+        <td>Documents</td>
+        <td>.pdf, .odt</td>
+        <td>locked formats</td>
+      </tr>
+      <tr>
+        <td>Images</td>
+        <td>.png, .tif, .jpg</td>
+        <td>proprietary formats</td>
+      </tr>
+      <tr>
+        <td>Data (structured)</td>
+        <td>.json, .xml</td>
+        <td>unclear formats</td>
+      </tr>
+      <tr>
+        <td>Geospatial</td>
+        <td>.geojson, .kml, .shp</td>
+        <td>software-specific only</td>
+      </tr>
+      <tr>
+        <td>Audio</td>
+        <td>.wav, .mp3, .flac</td>
+        <td>proprietary formats</td>
+      </tr>
+      <tr>
+        <td>Video</td>
+        <td>.mp4, .webm</td>
+        <td>uncommon codecs</td>
+      </tr>
+      <tr>
+        <td>Archives</td>
+        <td>.zip, .tar.gz</td>
+        <td>unclear compression</td>
+      </tr>
+    </table>
 
-<table style="width:100%; border-collapse: collapse;">
-<tr><th>If you have…</th><th>Use this (recommended)</th><th>Avoid when possible</th></tr>
-<tr><td>Tables / data</td><td>.csv, .tsv</td><td>.xlsx only</td></tr>
-<tr><td>Text / notes</td><td>.txt, .md, .xml</td><td>.docx only</td></tr>
-<tr><td>Documents</td><td>.pdf, .odt</td><td>locked formats</td></tr>
-<tr><td>Images</td><td>.png, .tif, .jpg</td><td>proprietary formats</td></tr>
-<tr><td>Data (structured)</td><td>.json, .xml</td><td>unclear formats</td></tr>
-<tr><td>Geospatial</td><td>.geojson, .kml, .shp</td><td>software-specific only</td></tr>
-<tr><td>Audio</td><td>.wav, .mp3, .flac</td><td>proprietary formats</td></tr>
-<tr><td>Video</td><td>.mp4, .webm</td><td>uncommon codecs</td></tr>
-<tr><td>Archives</td><td>.zip, .tar.gz</td><td>unclear compression</td></tr>
-</table>
+    <h2 id="geospatial">Geospatial Data</h2>
 
----
+    <table>
+      <tr>
+        <th>If you have…</th>
+        <th>Use this (recommended)</th>
+        <th>Avoid when possible</th>
+      </tr>
+      <tr>
+        <td>Vector data</td>
+        <td>.geojson, .shp, .gpkg</td>
+        <td>proprietary-only formats</td>
+      </tr>
+      <tr>
+        <td>Raster data</td>
+        <td>.tif (GeoTIFF)</td>
+        <td>unclear or compressed only</td>
+      </tr>
+      <tr>
+        <td>Maps (web)</td>
+        <td>.geojson, .kml</td>
+        <td>platform-locked formats</td>
+      </tr>
+      <tr>
+        <td>Coordinates data</td>
+        <td>.csv (with lat/long)</td>
+        <td>missing coordinate system</td>
+      </tr>
+    </table>
 
-<h2 id="geospatial">Geospatial Data</h2>
+    <p>What good geospatial data looks like</p>
 
-<table style="width:100%; border-collapse: collapse;">
-<tr><th>If you have…</th><th>Use this (recommended)</th><th>Avoid when possible</th></tr>
-<tr><td>Vector data</td><td>.geojson, .shp, .gpkg</td><td>proprietary-only formats</td></tr>
-<tr><td>Raster data</td><td>.tif (GeoTIFF)</td><td>unclear or compressed only</td></tr>
-<tr><td>Maps (web)</td><td>.geojson, .kml</td><td>platform-locked formats</td></tr>
-<tr><td>Coordinates data</td><td>.csv (with lat/long)</td><td>missing coordinate system</td></tr>
-</table>
+    <ul>
+      <li>coordinates are included (lat/long or projection)</li>
+      <li>coordinate system is specified (e.g. WGS84 / EPSG:4326)</li>
+      <li>file can be opened in common tools (QGIS, Python, R)</li>
+      <li>variables are clearly named</li>
+      <li>metadata explain how data were collected</li>
+    </ul>
 
-<p><strong>What good geospatial data looks like</strong></p>
-
-<ul>
-  <li>coordinates are included</li>
-  <li>coordinate system is specified</li>
-  <li>file can be opened in common tools</li>
-  <li>variables are clearly named</li>
-  <li>metadata explain how data were collected</li>
-</ul>
-
-<p><strong>Minimal example</strong></p>
-
-<p>
-Loire_Estuary_temperature_2024.csv<br>
-latitude, longitude, temperature_C<br>
+    <p>Minimal example
+stations_2024.csv
+latitude, longitude, temperature_C
 48.85, 2.35, 22.1
-</p>
+• README:
+Coordinates in WGS84 (EPSG:4326)
+Temperature measured at 1m height</p>
 
+    <h2 id="code">Code</h2>
 
----
+    <p>Recommended formats for code</p>
 
-<h2 id="code">Code</h2>
+    <table>
+      <tr>
+        <th>If you have…</th>
+        <th>Use this</th>
+        <th>Avoid</th>
+      </tr>
+      <tr>
+        <td>Scripts</td>
+        <td>.py, .R, .m, .sh</td>
+        <td>compiled only files</td>
+      </tr>
+      <tr>
+        <td>Notebooks</td>
+        <td>.ipynb</td>
+        <td>no explanation</td>
+      </tr>
+      <tr>
+        <td>Documentation</td>
+        <td>.md, .txt</td>
+        <td>no README</td>
+      </tr>
+      <tr>
+        <td>Environment</td>
+        <td>requirements.txt, .yml</td>
+        <td>not specified</td>
+      </tr>
+      <tr>
+        <td>Version control</td>
+        <td>Git (GitHub, GitLab)</td>
+        <td>local only</td>
+      </tr>
+      <tr>
+        <td>Archive</td>
+        <td>.zip, .tar.gz</td>
+        <td>scattered files</td>
+      </tr>
+    </table>
 
-<table style="width:100%; border-collapse: collapse;">
-<tr><th>If you have…</th><th>Use this</th><th>Avoid</th></tr>
-<tr><td>Scripts</td><td>.py, .R, .m, .sh</td><td>compiled only files</td></tr>
-<tr><td>Notebooks</td><td>.ipynb</td><td>no explanation</td></tr>
-<tr><td>Documentation</td><td>.md, .txt</td><td>no README</td></tr>
-<tr><td>Environment</td><td>requirements.txt, .yml</td><td>not specified</td></tr>
-<tr><td>Version control</td><td>Git</td><td>local only</td></tr>
-<tr><td>Archive</td><td>.zip, .tar.gz</td><td>scattered files</td></tr>
-</table>
+    <p>What good code looks like</p>
 
-<p><strong>Minimal example</strong></p>
+    <ul>
+      <li>the code runs</li>
+      <li>the steps are clear</li>
+      <li>there are comments</li>
+      <li>dependencies are listed</li>
+      <li>someone else can execute it</li>
+    </ul>
 
-<pre>
-project/
+    <p>Minimal example</p>
+
+    <pre>project/
 ├── data/
 ├── code/
 │   ├── analysis.py
 │   └── README.md
-└── results/
-</pre>
+└── results/</pre>
 
-<p>
-Run analysis.py using Python 3.10<br>
+    <p>Inside README.md:
+Run analysis.py using Python 3.10
 Install dependencies from requirements.txt
-</p>
+One rule:
+If someone cannot run your code and obtain the same result, it is not ready to share.</p>
 
-<p>
-Remember:<br>
-If someone cannot run your code and obtain the same result, it is not ready to share.
-</p>
+    <hr>
 
----
+    <h2 id="metadata">2. Metadata</h2>
 
-<h2 id="metadata">2. Metadata</h2>
+    <p>Metadata are simply the information that explains your data. They allow someone else to understand what you did, without asking you.
+A useful way to structure this is through Dublin Core (DCMI).
+You can create a .xml or .json file (editable with a text editor).
+Example:</p>
 
-<p>
-Metadata are simply the information that explains your data.
-</p>
-
-<pre>
-Title:
+    <pre>Title:
 Creator:
 Subject:
 Description:
@@ -362,102 +454,195 @@ Source:
 Language:
 Relation:
 Coverage:
-Rights:
-</pre>
+Rights:</pre>
 
-<p><strong>Embedded metadata</strong></p>
+    <p>What does “embedded metadata” mean?
+Embedded metadata are written inside the file itself.
+This is possible for some formats:</p>
 
-<ul>
-  <li>images (.tif, .jpg)</li>
-  <li>geospatial data</li>
-  <li>PDFs</li>
-  <li>scientific formats</li>
-</ul>
+    <ul>
+      <li>images (.tif, .jpg) = metadata stored in the file</li>
+      <li>geospatial data (.tif, .shp) = includes coordinate system, projection</li>
+      <li>PDFs = author, title, keywords</li>
+      <li>some scientific formats (.nc, .hdf5)</li>
+    </ul>
 
-<p><strong>Separate metadata</strong></p>
+    <p>In these cases, the information travels with the file.</p>
 
-<ul>
-  <li>README</li>
-  <li>.json / .xml</li>
-  <li>repository form</li>
-</ul>
+    <p>When metadata are separate
+For many datasets (especially .csv), metadata are not embedded.
+In that case, you provide them as:</p>
 
----
+    <ul>
+      <li>a README file</li>
+      <li>a metadata file (.json, .xml)</li>
+      <li>fields filled directly in the repository (e.g. Zenodo form)</li>
+    </ul>
 
-<h2 id="readme">3. README</h2>
+    <p>Which one should you choose?</p>
 
-<ul>
-  <li>what the dataset contains</li>
-  <li>how the data were collected</li>
-  <li>variables</li>
-  <li>units</li>
-  <li>processing steps</li>
-  <li>license</li>
-</ul>
+    <ul>
+      <li>If your format supports it = embed metadata</li>
+      <li>If not = use README + metadata file</li>
+      <li>In any case, fill metadata form in the repository when you deposit your data</li>
+    </ul>
 
-<pre>
-Title: Temperature dataset, Loire Estuary, 2024
+    <p>All you need to remember:
+Metadata do not have to be in one place, what matters is that they exist and are clear.</p>
+
+    <h2 id="readme">3. README</h2>
+
+    <p>A README is the simplest and most important document in your dataset.
+It is where you explain your data in plain language.
+Without a README, even well-structured data can become difficult to understand.</p>
+
+    <p>What a README does
+A README allows someone else to:</p>
+
+    <ul>
+      <li>understand what the dataset is</li>
+      <li>know how it was created</li>
+      <li>interpret the variables</li>
+      <li>use the data without asking you</li>
+    </ul>
+
+    <p>It is the bridge between your data and the person who will reuse them.</p>
+
+    <p>What to include
+A README does not need to be long. It just needs to be clear.
+At minimum:</p>
+
+    <ul>
+      <li>what the dataset contains</li>
+      <li>how the data were collected (e.g. instrument, technique, method)</li>
+      <li>what each variable means</li>
+      <li>units and formats</li>
+      <li>any processing steps</li>
+      <li>who to contact (optional)</li>
+      <li>license</li>
+    </ul>
+
+    <p>Example
+README.txt</p>
+
+    <pre>Title: Temperature dataset, Loire Estuary, 2024
 
 Description:
-Temperature measured every 10 minutes.
+Temperature measured every 10 minutes during field campaign.
 
 Variables:
-time_min
-temperature_C
+time_min = time in minutes
+temperature_C = temperature in Celsius
 
 Method:
-Sensor at 1m height
+Sensor placed at 1m height above ground.
 
 Format:
-CSV
+CSV file
 
 License:
-CC BY 4.0
-</pre>
+CC BY 4.0</pre>
 
----
+    <h2 id="license">3. License</h2>
 
-<h2 id="license">License</h2>
+    <p>A dataset cannot be reused if people do not know whether they are allowed to use it.
+A license is what tells others what they can do with your data. Without it, even well-prepared data may not be reused, simply because the conditions are unclear.</p>
 
-<ul>
-  <li>CC BY</li>
-  <li>CC BY-SA</li>
-  <li>CC BY-NC</li>
-  <li>CC0</li>
-</ul>
+    <p>Common licenses:</p>
 
-<p>License: CC BY 4.0</p>
+    <ul>
+      <li>CC BY : others can use your data, but must give credit</li>
+      <li>CC BY-SA : same as above, but must share under the same license</li>
+      <li>CC BY-NC : reuse allowed for non-commercial purposes only</li>
+      <li>CC0 : no restriction, data are fully open</li>
+    </ul>
 
----
+    <p>How to add your license?
+In your metadata or README, you need to add:
+License: CC BY 4.0
+This means your data can be reused, as long as you are cited.</p>
 
-<h2 id="repository">4. Repository</h2>
+    <h2 id="repository">4. Repository</h2>
 
-<p>
+    <p>Where to keep your data after your project ends?
+A repository is not just storage. It makes your data:</p>
+
+    <ul>
+      <li>findable</li>
+      <li>accessible</li>
+      <li>preserved over time</li>
+      <li>citable</li>
+    </ul>
+
+    <p>Most repositories assign a DOI, giving your dataset a permanent reference.</p>
+
+    <p>Recommended repositories (REWRITE context)
+When I worked at REWRITE as a data steward, I had several discussions with the library open science team:
 https://bu.univ-nantes.fr/science-ouverte
-</p>
+Here is their recommended list:</p>
 
-<table style="width:100%; border-collapse: collapse;">
-<tr><th>Repository</th><th>Scope</th><th>URL</th><th>Size Limit</th><th>Notes</th></tr>
-<tr><td>EasyData</td><td>Earth system science</td><td>easydata.earth</td><td>5 GB/file</td><td>Curated</td></tr>
-<tr><td>SEANOE</td><td>Oceanography</td><td>seanoe.org</td><td>100 GB</td><td>Marine-focused</td></tr>
-<tr><td>Nakala</td><td>Humanities</td><td>nakala.fr</td><td>Flexible</td><td>Huma-Num</td></tr>
-<tr><td>GBIF</td><td>Biodiversity</td><td>gbif.org</td><td>No limit</td><td>Institutional</td></tr>
-<tr><td>Recherche Data Gouv</td><td>General</td><td>dataverse</td><td>50 GB/file</td><td>National</td></tr>
-<tr><td>Zenodo</td><td>General</td><td>zenodo.org</td><td>50 GB</td><td>Widely used</td></tr>
-</table>
+    <table>
+      <tr>
+        <th>Repository</th>
+        <th>Scope</th>
+        <th>URL</th>
+        <th>Size Limit</th>
+        <th>Notes</th>
+      </tr>
+      <tr>
+        <td>EasyData</td>
+        <td>Earth system science</td>
+        <td>easydata.earth</td>
+        <td>5 GB/file</td>
+        <td>Curated, support available</td>
+      </tr>
+      <tr>
+        <td>SEANOE</td>
+        <td>Oceanography</td>
+        <td>seanoe.org</td>
+        <td>100 GB</td>
+        <td>Marine-focused</td>
+      </tr>
+      <tr>
+        <td>Nakala</td>
+        <td>Humanities</td>
+        <td>nakala.fr</td>
+        <td>Flexible</td>
+        <td>Huma-Num</td>
+      </tr>
+      <tr>
+        <td>GBIF</td>
+        <td>Biodiversity</td>
+        <td>gbif.org</td>
+        <td>No limit</td>
+        <td>Institutional endorsement</td>
+      </tr>
+      <tr>
+        <td>Recherche Data Gouv</td>
+        <td>General</td>
+        <td>dataverse</td>
+        <td>50 GB/file</td>
+        <td>National repository</td>
+      </tr>
+      <tr>
+        <td>Zenodo</td>
+        <td>General</td>
+        <td>zenodo.org</td>
+        <td>50 GB</td>
+        <td>Widely used</td>
+      </tr>
+    </table>
 
----
+    <h2 id="questions">5. Further details</h2>
 
-<h2 id="questions">5. Further details</h2>
-
-<p>
-Are you working in REWRITE? If yes, we have a full document about data management in our DMP.
-</p>
-
-<p>
+    <p>Are you working in REWRITE? If yes, we have a full document about data management in our DMP in our cloud.
 If you’re not and you’re interested, I can share it with you.
-</p>
+Feel free to contact me:
+lily.puspasari@univ-nantes.fr</p>
 
-<p>
-lily.puspasari@univ-nantes.fr
-</p>
+  </main>
+
+</div>
+
+</body>
+</html>
