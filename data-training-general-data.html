@@ -184,10 +184,9 @@
 
     <h1>General Data</h1>
 
-    <h2 id="good-data">What Good Data Looks Like</h2>
+    <h2 id="good-data">3. What Good Data Looks Like</h2>
 
-    <p>What Good Data Looks Like
-It is often said that data should be “FAIR.” But for many researchers, this remains abstract. What does FAIR data actually look like in practice?
+    <p>It is often said that data should be “FAIR.” But for many researchers, this remains abstract. What does FAIR data actually look like in practice?
 An ideal dataset is not defined by its size or discipline. It is defined by whether someone else can understand and reuse it without needing to contact its author.</p>
 
     
@@ -209,9 +208,9 @@ Could your future self, or a colleague in another lab, make sense of your data i
 
     <hr>
 
-    <h2 id="data">1. The Data</h2>
+    <h2 id="data">4. The Data</h2>
 
-    <p><strong>Example</strong></p>
+    <p><strong>4.1 Example</strong></p>
 
     <p><strong>Bad</strong>
 data_final.xlsx
@@ -228,7 +227,7 @@ README.txt
 This is temperature measured every 10 minutes in °C.
 Now anyone can use it.</p>
 
-    <p><strong>If you have many files</strong>
+    <p><strong>4.2 If you have many files</strong>
 Example of how to structure the folder:</p>
 
     <pre>Loire_Estuary/
@@ -239,7 +238,7 @@ Example of how to structure the folder:</p>
 
     <p>Keep it simple, but do not mix everything in one place.</p>
 
-    <h2 id="file-name">File names</h2>
+    <h2 id="file-name">4.3 File name</h2>
 
     <p>A meaningful file naming is really helpful to make others follow your process and your work. Example of a good practice of naming files are:</p>
 
@@ -263,7 +262,7 @@ Example of how to structure the folder:</p>
 temperature_20241210_v3.pdf
 Underscores are more interoperable. They are easier for machines to read and process, while spaces often create errors.</p>
 
-    <h2 id="format">Format</h2>
+    <h2 id="format">4.4 Format</h2>
 
     <p>Example of open formats:</p>
 
@@ -437,7 +436,7 @@ If someone cannot run your code and obtain the same result, it is not ready to s
 
     <hr>
 
-    <h2 id="metadata">2. Metadata</h2>
+    <h2 id="metadata">5. Metadata</h2>
 
     <p>Metadata are simply the information that explains your data. They allow someone else to understand what you did, without asking you.
 A useful way to structure this is through Dublin Core (DCMI).
@@ -460,7 +459,7 @@ Relation:
 Coverage:
 Rights:</pre>
 
-    <p>What does “embedded metadata” mean?
+    <p>5.1 What does “embedded metadata” mean?
 Embedded metadata are written inside the file itself.
 This is possible for some formats:</p>
 
@@ -473,7 +472,7 @@ This is possible for some formats:</p>
 
     <p>In these cases, the information travels with the file.</p>
 
-    <p>When metadata are separate
+    <p>5.2 When metadata are separate
 For many datasets (especially .csv), metadata are not embedded.
 In that case, you provide them as:</p>
 
@@ -483,7 +482,7 @@ In that case, you provide them as:</p>
       <li>fields filled directly in the repository (e.g. Zenodo form)</li>
     </ul>
 
-    <p>Which one should you choose?</p>
+    <p>5.3 Which one should you choose?</p>
 
     <ul>
       <li>If your format supports it = embed metadata</li>
@@ -491,16 +490,19 @@ In that case, you provide them as:</p>
       <li>In any case, fill metadata form in the repository when you deposit your data</li>
     </ul>
 
-    <p>All you need to remember:
-Metadata do not have to be in one place, what matters is that they exist and are clear.</p>
+       
+    <div class="box">
+     All you need to remember:
+Metadata do not have to be in one place, what matters is that they exist and are clear.
+    </div>
 
-    <h2 id="readme">3. README</h2>
+    <h2 id="readme">6. README</h2>
 
     <p>A README is the simplest and most important document in your dataset.
 It is where you explain your data in plain language.
 Without a README, even well-structured data can become difficult to understand.</p>
 
-    <p>What a README does
+    <p>6.1 What a README does
 A README allows someone else to:</p>
 
     <ul>
@@ -512,7 +514,7 @@ A README allows someone else to:</p>
 
     <p>It is the bridge between your data and the person who will reuse them.</p>
 
-    <p>What to include
+    <p>6.2 What to include
 A README does not need to be long. It just needs to be clear.
 At minimum:</p>
 
@@ -526,7 +528,7 @@ At minimum:</p>
       <li>license</li>
     </ul>
 
-    <p>Example
+    <p>6.3 Example
 README.txt</p>
 
     <pre>Title: Temperature dataset, Loire Estuary, 2024
@@ -547,12 +549,12 @@ CSV file
 License:
 CC BY 4.0</pre>
 
-    <h2 id="license">3. License</h2>
+    <h2 id="license">7. License</h2>
 
     <p>A dataset cannot be reused if people do not know whether they are allowed to use it.
 A license is what tells others what they can do with your data. Without it, even well-prepared data may not be reused, simply because the conditions are unclear.</p>
 
-    <p>Common licenses:</p>
+    <p>7.1 Common licenses:</p>
 
     <ul>
       <li>CC BY : others can use your data, but must give credit</li>
@@ -561,12 +563,12 @@ A license is what tells others what they can do with your data. Without it, even
       <li>CC0 : no restriction, data are fully open</li>
     </ul>
 
-    <p>How to add your license?
+    <p>7.2 How to add your license?
 In your metadata or README, you need to add:
 License: CC BY 4.0
 This means your data can be reused, as long as you are cited.</p>
 
-    <h2 id="repository">4. Repository</h2>
+    <h2 id="repository">8. Repository</h2>
 
     <p>Where to keep your data after your project ends?
 A repository is not just storage. It makes your data:</p>
@@ -577,8 +579,10 @@ A repository is not just storage. It makes your data:</p>
       <li>preserved over time</li>
       <li>citable</li>
     </ul>
-
-    <p>Most repositories assign a DOI, giving your dataset a permanent reference.</p>
+       
+    <div class="box">
+     Most repositories assign a DOI, giving your dataset a permanent reference.
+    </div>
 
     <p>Recommended repositories (REWRITE context)
 When I worked at REWRITE as a data steward, I had several discussions with the library open science team:
