@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
   <meta
     name="description"
     content="Lily Puspasari — PhD researcher working on coastal rewilding, environmental data integration, spatial analysis, and artificial intelligence."
@@ -12,6 +13,11 @@
   <title>Lily Puspasari | Coastal Rewilding, Data Integration & AI</title>
 
   <style>
+
+    /* =========================
+       GENERAL PAGE
+       ========================= */
+
     body {
       margin: 0;
       background: #fafafa;
@@ -19,6 +25,20 @@
       color: #222;
       font-size: 15px;
     }
+
+    .page {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+
+
+    /* =========================
+       NAVIGATION
+       ========================= */
 
     .nav {
       background: #111;
@@ -38,21 +58,23 @@
       text-decoration: underline;
     }
 
-    .page {
-      max-width: 900px;
-      margin: 40px auto;
-      background: white;
-      padding: 40px;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-    }
+
+    /* =========================
+       HERO / PROFILE
+       ========================= */
 
     .hero {
       text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 30px;
     }
 
-    .hero img {
+    /*
+      IMPORTANT:
+      ">" means this style only applies
+      to your portrait, not the logos.
+    */
+
+    .hero > img {
       width: 100px;
       height: 100px;
       border-radius: 50%;
@@ -62,32 +84,79 @@
 
     h1 {
       font-size: 18px;
-      margin-bottom: 8px;
+      margin: 4px 0 8px;
     }
 
     .subtitle {
       font-size: 15px;
       color: #555;
-      margin-bottom: 6px;
+      margin-bottom: 10px;
       text-align: center;
       line-height: 1.6;
     }
 
     .meta {
       font-family: Arial, sans-serif;
-      font-size: 15px;
+      font-size: 14px;
       color: #777;
       text-align: center;
-      margin-bottom: 20px;
+      margin-top: 14px;
+      margin-bottom: 8px;
     }
 
-    /* Social / professional links */
+
+    /* =========================
+       UNIVERSITY LOGOS
+       ========================= */
+
+    .institution-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin: 12px 0 22px;
+    }
+
+    .institution-links a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .institution-logo {
+      height: 38px;
+      max-width: 155px;
+      width: auto;
+      object-fit: contain;
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .institution-logo:hover {
+      opacity: 0.75;
+      transform: translateY(-1px);
+    }
+
+    .institution-divider {
+      font-family: Arial, sans-serif;
+      color: #aaa;
+      font-size: 18px;
+    }
+
+
+    /* =========================
+       SOCIAL / PROFESSIONAL LINKS
+       ========================= */
+
     .social-links {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
       gap: 10px;
-      margin: 22px 0 10px;
+      margin: 20px 0 10px;
       font-family: Arial, sans-serif;
     }
 
@@ -106,6 +175,11 @@
       background: #222;
       color: white;
     }
+
+
+    /* =========================
+       TEXT
+       ========================= */
 
     h2 {
       margin-top: 30px;
@@ -132,11 +206,86 @@
       color: #333;
     }
 
+
+    /* =========================
+       FUNDING
+       ========================= */
+
+    .funding {
+      text-align: center;
+      margin: 30px auto;
+      padding: 20px 10px;
+      border-top: 1px solid #eee;
+      border-bottom: 1px solid #eee;
+    }
+
+    .funding-title {
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #777;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+
+    .funding-logos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .funding-logos a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .funding-logo {
+      height: 45px;
+      max-width: 180px;
+      width: auto;
+      object-fit: contain;
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+    }
+
+    .funding-logo:hover {
+      opacity: 0.75;
+      transform: translateY(-1px);
+    }
+
+    .funding-divider {
+      color: #bbb;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+    }
+
+    .funding-note {
+      margin-top: 14px;
+      font-family: Arial, sans-serif;
+      font-size: 12px;
+      color: #888;
+    }
+
+
+    /* =========================
+       EVENTS
+       ========================= */
+
     .event-note {
       margin-top: 15px;
       color: #555;
       font-style: italic;
     }
+
+
+    /* =========================
+       QUOTE
+       ========================= */
 
     .quote {
       text-align: center;
@@ -154,6 +303,11 @@
       font-size: 12px;
       margin-bottom: 4px;
     }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
 
     .footer {
       margin-top: 40px;
@@ -175,7 +329,13 @@
       text-decoration: underline;
     }
 
+
+    /* =========================
+       MOBILE
+       ========================= */
+
     @media (max-width: 700px) {
+
       .page {
         margin: 0;
         padding: 28px 20px;
@@ -189,35 +349,125 @@
       .nav a {
         margin-right: 12px;
       }
+
+      .institution-logo {
+        height: 32px;
+        max-width: 130px;
+      }
+
+      .funding-logo {
+        height: 38px;
+        max-width: 145px;
+      }
+
     }
+
   </style>
 </head>
 
+
 <body>
 
+
+<!-- =========================
+     NAVIGATION
+     ========================= -->
+
 <div class="nav">
-  <a href="index.html">Home</a>
-  <a href="data-training-welcome.html">Data Training</a>
+
+  <a href="index.html">
+    Home
+  </a>
+
+  <a href="data-training-welcome.html">
+    Data Training
+  </a>
+
 </div>
+
+
+<!-- =========================
+     MAIN PAGE
+     ========================= -->
 
 <div class="page">
 
-  <div class="hero">
-    <img src="photo.jpg" alt="Portrait of Lily Puspasari">
 
-    <h1>Lily Puspasari</h1>
+  <!-- =========================
+       PROFILE HEADER
+       ========================= -->
+
+  <div class="hero">
+
+    <img
+      src="photo.jpg"
+      alt="Portrait of Lily Puspasari"
+    >
+
+    <h1>
+      Lily Puspasari
+    </h1>
 
     <div class="subtitle">
-      <strong>Coastal rewilding · Data integration · Artificial intelligence</strong>
+      <strong>
+        Coastal rewilding · Data integration · Artificial intelligence
+      </strong>
     </div>
+
+
+    <!-- POSITION -->
 
     <div class="meta">
-      PhD Researcher at Nantes Université &amp; University of Southern Denmark (SDU)
+      PhD Researcher
     </div>
 
-    <div class="social-links">
 
-      <!-- Replace these URLs with your real links -->
+    <!-- UNIVERSITY LOGOS -->
+
+    <div class="institution-links">
+
+      <a
+        href="https://www.univ-nantes.fr/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="Nantes Université"
+      >
+
+        <img
+          src="nantes-logo.png"
+          alt="Nantes Université"
+          class="institution-logo"
+        >
+
+      </a>
+
+
+      <span class="institution-divider">
+        ×
+      </span>
+
+
+      <a
+        href="https://www.sdu.dk/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="University of Southern Denmark"
+      >
+
+        <img
+          src="sdu-logo.png"
+          alt="University of Southern Denmark"
+          class="institution-logo"
+        >
+
+      </a>
+
+    </div>
+
+
+    <!-- PROFESSIONAL LINKS -->
+
+    <div class="social-links">
 
       <a
         href="https://www.linkedin.com/in/slily/"
@@ -240,7 +490,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        Google Schoolar Profile
+        Google Scholar
       </a>
 
       <a
@@ -248,14 +498,22 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        REWRITE EU Project
+        REWRITE
       </a>
 
     </div>
+
   </div>
 
 
-  <h2>About my research</h2>
+
+  <!-- =========================
+       ABOUT RESEARCH
+       ========================= -->
+
+  <h2>
+    About my research
+  </h2>
 
   <p>
     I work at the intersection of environmental data, spatial analysis,
@@ -265,47 +523,125 @@
   </p>
 
   <p>
-    I study why coastal ecosystems degrade and how they may recover,
-    reorganise and regain ecological functions and how they will survive
-    the future climate extremes.
+    I study the trajectories of coastal ecosystems and how they may recover,
+    reorganise, and regain ecological functions, as well as how they may
+    respond to future climate extremes.
   </p>
 
 
-  <h2>Research motivation</h2>
+
+  <!-- =========================
+       FUNDING LOGOS
+       ========================= -->
+
+  <div class="funding">
+
+    <div class="funding-title">
+      PhD project funded by
+    </div>
+
+
+    <div class="funding-logos">
+
+      <!-- REWRITE -->
+
+      <a
+        href="https://rewriteproject.eu/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="REWRITE — Horizon Europe Project"
+      >
+
+        <img
+          src="rewrite-logo.png"
+          alt="REWRITE Horizon Europe Project"
+          class="funding-logo"
+        >
+
+      </a>
+
+
+      <span class="funding-divider">
+        +
+      </span>
+
+
+      <!-- SDU CLIMATE CLUSTER -->
+
+      <a
+        href="https://www.sdu.dk/"
+        target="_blank"
+        rel="noopener noreferrer"
+        title="SDU Climate Cluster"
+      >
+
+        <img
+          src="sdu-climate-cluster-logo.png"
+          alt="SDU Climate Cluster"
+          class="funding-logo"
+        >
+
+      </a>
+
+    </div>
+
+
+    <div class="funding-note">
+      REWRITE — Horizon Europe &amp; SDU Climate Cluster
+    </div>
+
+  </div>
+
+
+
+  <!-- =========================
+       MOTIVATION
+       ========================= -->
+
+  <h2>
+    Research motivation
+  </h2>
 
   <p>
     Coastal ecosystems play important roles in climate regulation,
-    biodiversity conservation, shoreline protection and human well-being.
+    biodiversity conservation, shoreline protection, and human well-being.
     Yet many of these ecosystems are under increasing pressure from climate
-    change, biodiversity loss, land-use change and long histories of human
+    change, biodiversity loss, land-use change, and long histories of human
     intervention.
   </p>
 
   <p>
-    Coastal rewilding is an emerging field and its definition, the success
-    indicators and resilience are still evolving.
+    Coastal rewilding is an emerging field, and its definition,
+    indicators of success, and resilience are still evolving.
   </p>
 
   <p>
     My goal is to help make coastal rewilding more measurable and operational
-    by developing quantitative frameworks and models that can
-    be used to assess rewilding potential and ecological change.
+    by developing quantitative frameworks and models that can be used to
+    assess rewilding potential and ecological change.
   </p>
 
   <p>
     By the end of my PhD, I aim to contribute decision-support tools,
     including a European coastal rewilding map and an analytical framework
-    designed to be transparent, reusable and extensible by other researchers
+    designed to be transparent, reusable, and extensible by other researchers
     and practitioners.
   </p>
 
 
-  <h2>Open Science &amp; Data Practices</h2>
+
+  <!-- =========================
+       OPEN SCIENCE
+       ========================= -->
+
+  <h2>
+    Open Science &amp; Data Practices
+  </h2>
 
   <p>
     I am also interested in Open Science and research data management,
-    particularly reproducible workflows, good documentation, data
-    interoperability both by human and machine.
+    particularly reproducible workflows, good documentation, and data
+    interoperability for both humans and machines.
   </p>
 
   <p>
@@ -313,16 +649,31 @@
   </p>
 
 
-  <h2>Personal Interests</h2>
+
+  <!-- =========================
+       PERSONAL
+       ========================= -->
+
+  <h2>
+    Personal Interests
+  </h2>
 
   <p>
-    I like cats, escape games and potatoes.
+    I like cats, escape games, and potatoes.
   </p>
 
 
-  <h2>Events &amp; Activities — 2026</h2>
+
+  <!-- =========================
+       EVENTS
+       ========================= -->
+
+  <h2>
+    Events &amp; Activities — 2026
+  </h2>
 
   <ul>
+
     <li>
       <strong>27–30 April 2026</strong> —
       Fieldwork at Gyldensteen Coastal Lagoon, Denmark
@@ -357,7 +708,9 @@
       REWRITE Annual Meeting 2026,
       Cádiz, Spain
     </li>
+
   </ul>
+
 
   <p class="event-note">
     I update this list regularly. If you would like to discuss my work,
@@ -366,24 +719,40 @@
   </p>
 
 
+
+  <!-- =========================
+       QUOTE
+       ========================= -->
+
   <div class="quote">
 
     <div class="aksara">
       ꦈꦫꦶꦥ꧀ ꦆꦏꦸ ꦩꦸꦁ ꦩꦩ꧀ꦥꦶꦂ ꦔꦺꦴꦩ꧀ꦧꦺ
     </div>
 
-    “Life is just stopping by for a drink.”<br>
+    “Life is just stopping by for a drink.”
+
+    <br>
+
     — Javanese proverb, from my mother tongue
 
     <br><br>
 
     To me, it is a reminder that life is a very brief stop.
     We are all temporary passengers, passing through a particular moment
-    in time and space. What matters is how we use that time: to be at peace
-    with ourselves, to help others, and to contribute to the things we care about.
+    in time and space.
+
+    What matters is how we use that time:
+    to be at peace with ourselves, to help others,
+    and to contribute to the things we care about.
 
   </div>
 
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
 
   <div class="footer">
 
@@ -391,6 +760,7 @@
     research ideas, or simply to have a good conversation.
 
     <br><br>
+
 
     <a href="mailto:lily.puspasari@univ-nantes.fr">
       lily.puspasari@univ-nantes.fr
@@ -402,7 +772,9 @@
       lily.puspasari@etu.univ-nantes.fr
     </a>
 
+
     <br><br>
+
 
     <div class="social-links">
 
@@ -423,16 +795,25 @@
       </a>
 
       <a
+        href="https://scholar.google.com/citations?user=HUVIjJ8AAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Google Scholar
+      </a>
+
+      <a
         href="https://rewriteproject.eu/"
         target="_blank"
         rel="noopener noreferrer"
       >
-        REWRITE EU
+        REWRITE
       </a>
 
     </div>
 
   </div>
+
 
 </div>
 
