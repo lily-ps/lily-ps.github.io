@@ -1,9 +1,15 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Lily Puspasari</title>
+  <meta
+    name="description"
+    content="Lily Puspasari — PhD researcher working on coastal rewilding, environmental data integration, spatial analysis, and artificial intelligence."
+  />
+
+  <title>Lily Puspasari | Coastal Rewilding, Data Integration & AI</title>
 
   <style>
     body {
@@ -55,7 +61,7 @@
     }
 
     h1 {
-      font-size: 16px;
+      font-size: 18px;
       margin-bottom: 8px;
     }
 
@@ -75,6 +81,32 @@
       margin-bottom: 20px;
     }
 
+    /* Social / professional links */
+    .social-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 22px 0 10px;
+      font-family: Arial, sans-serif;
+    }
+
+    .social-links a {
+      display: inline-block;
+      padding: 9px 14px;
+      border: 1px solid #222;
+      border-radius: 6px;
+      color: #222;
+      text-decoration: none;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    .social-links a:hover {
+      background: #222;
+      color: white;
+    }
+
     h2 {
       margin-top: 30px;
       margin-bottom: 8px;
@@ -88,8 +120,22 @@
     }
 
     ul {
-      line-height: 1.6;
+      line-height: 1.7;
       font-size: 15px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    a {
+      color: #333;
+    }
+
+    .event-note {
+      margin-top: 15px;
+      color: #555;
+      font-style: italic;
     }
 
     .quote {
@@ -101,20 +147,48 @@
       margin-left: auto;
       margin-right: auto;
       font-size: 14px;
+      line-height: 1.7;
     }
 
     .quote .aksara {
       font-size: 12px;
+      margin-bottom: 4px;
     }
 
     .footer {
       margin-top: 40px;
-      padding-top: 15px;
+      padding-top: 20px;
       border-top: 1px solid #ddd;
       font-family: Arial, sans-serif;
       font-size: 14px;
       color: #666;
       text-align: center;
+      line-height: 1.7;
+    }
+
+    .footer a {
+      color: #444;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        margin: 0;
+        padding: 28px 20px;
+        border-radius: 0;
+      }
+
+      .nav {
+        padding: 12px 15px;
+      }
+
+      .nav a {
+        margin-right: 12px;
+      }
     }
   </style>
 </head>
@@ -129,90 +203,239 @@
 <div class="page">
 
   <div class="hero">
-    <img src="photo.jpg" alt="Lily Puspasari">
+    <img src="photo.jpg" alt="Portrait of Lily Puspasari">
+
     <h1>Lily Puspasari</h1>
 
     <div class="subtitle">
-      <strong>Coastal rewilding · Data integration · AI</strong>
+      <strong>Coastal rewilding · Data integration · Artificial intelligence</strong>
     </div>
 
     <div class="meta">
-      PhD Researcher at Nantes Université &amp; Syddansk Universitet
+      PhD Researcher at Nantes Université &amp; University of Southern Denmark (SDU)
+    </div>
+
+    <div class="social-links">
+
+      <!-- Replace these URLs with your real links -->
+
+      <a
+        href="https://www.linkedin.com/in/slily/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="https://orcid.org/0000-0001-6336-0167"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ORCID
+      </a>
+
+      <a
+        href="https://scholar.google.com/citations?user=HUVIjJ8AAAAJ&hl=en"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Google Schoolar Profile
+      </a>
+
+      <a
+        href="https://rewriteproject.eu/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        REWRITE EU Project
+      </a>
+
     </div>
   </div>
 
-  <h2>Summary</h2>
+
+  <h2>About my research</h2>
 
   <p>
-    I work at the intersection of environmental data, spatial analysis, and artificial intelligence to map rewilding potential across European coasts, mostly on three habitats: mudflats, saltmarshes, and seagrass meadows.
+    I work at the intersection of environmental data, spatial analysis,
+    and artificial intelligence to investigate coastal rewilding potential
+    across Europe. My research focuses particularly on three coastal habitats:
+    intertidal mudflats, salt marshes, and seagrass meadows.
   </p>
 
   <p>
-    My research explores why coastal ecosystems degrade, and how they can recover and reorganize through nature-based solutions (NbS). I am particularly interested in low-intervention approaches, where ecosystems are given the space and conditions to regenerate naturally.
+    I study why coastal ecosystems degrade and how they may recover,
+    reorganise and regain ecological functions and how they will survive
+    the future climate extremes.
   </p>
 
-  <h2>Motivation</h2>
 
-  <p>
-    Coastal ecosystems are crucial in climate regulation, biodiversity support, and shoreline protection. Yet, they are rapidly degrading due to climate change, biodiversity loss, and long histories of human pressure.
-  </p>
-
-  <p>
-    Coastal rewilding remains not fully defined, with ongoing debates around its meaning, scope, and implementation.
-  </p>
+  <h2>Research motivation</h2>
 
   <p>
-    My goal is to make rewilding more measurable, operational, and data-driven by developing quantitative frameworks and models to assess rewilding processes.
+    Coastal ecosystems play important roles in climate regulation,
+    biodiversity conservation, shoreline protection and human well-being.
+    Yet many of these ecosystems are under increasing pressure from climate
+    change, biodiversity loss, land-use change and long histories of human
+    intervention.
   </p>
 
   <p>
-    By the end of my PhD, I aim to deliver decision-support tools, including a coastal rewilding map and an analytical framework grounded in data and designed to be reusable and extensible by others.
+    Coastal rewilding is an emerging field and its definition, the success
+    indicators and resilience are still evolving.
   </p>
+
+  <p>
+    My goal is to help make coastal rewilding more measurable and operational
+    by developing quantitative frameworks and models that can
+    be used to assess rewilding potential and ecological change.
+  </p>
+
+  <p>
+    By the end of my PhD, I aim to contribute decision-support tools,
+    including a European coastal rewilding map and an analytical framework
+    designed to be transparent, reusable and extensible by other researchers
+    and practitioners.
+  </p>
+
 
   <h2>Open Science &amp; Data Practices</h2>
 
   <p>
-    I am interested in Open Science and research data management, focusing on reproducible workflows, documentation, and transparent sharing of code and methods.
+    I am also interested in Open Science and research data management,
+    particularly reproducible workflows, good documentation, data
+    interoperability both by human and machine.
   </p>
 
   <p>
-    I am trying my best to make my work accessible, reusable, and aligned with FAIR principles.
+    As a former Data Steward, I try to make my research as FAIR as possible.
   </p>
+
 
   <h2>Personal Interests</h2>
 
   <p>
-    I like cats, escape games, and potatoes (in that order).
+    I like cats, escape games and potatoes.
   </p>
 
-  <h2>Future Events</h2>
+
+  <h2>Events &amp; Activities — 2026</h2>
 
   <ul>
-    <li><strong>April 27–30, 2026</strong> : Fieldwork in Gyldensteen Coastal Lagoon (Denmark)</li>
-    <li><strong>June 2026</strong> : Online training on FAIR data practices (online for Rewriters)</li>
-    <li><strong>May 2026</strong> : Fieldwork in Scheldt Estuary (Belgium)</li>
-    <li><strong>August 2026</strong> : Poster for SERE (the 15th European Conference on Ecological Restoration) Conference in Brest (France)</li>
-    <li><strong>September 2026</strong> : Oral Presentation for Joint NSO–GfÖ Conference 2026 (Integrating the Diversity of Ecology) Conference in Odense (Denmark)</li>
-    <li><strong>October 2026</strong> : REWRITE Annual Meeting 2026 in Cadiz (Spain)</li>
+    <li>
+      <strong>27–30 April 2026</strong> —
+      Fieldwork at Gyldensteen Coastal Lagoon, Denmark
+    </li>
 
-     <li>I will update this list regularly, if you're interested in discussion or you would like the materials, feel free to send me an email (the address below).</li>
+    <li>
+      <strong>May 2026</strong> —
+      Fieldwork in the Scheldt Estuary, Belgium
+    </li>
+
+    <li>
+      <strong>June 2026</strong> —
+      Online training on FAIR data practices for the REWRITE community
+    </li>
+
+    <li>
+      <strong>August 2026</strong> —
+      Poster presentation at SERE 2026,
+      the 15th European Conference on Ecological Restoration,
+      Brest, France
+    </li>
+
+    <li>
+      <strong>September 2026</strong> —
+      Oral presentation at the Joint NSoE–GfÖ Conference 2026,
+      <em>Integrating the Diversity of Ecology</em>,
+      Odense, Denmark
+    </li>
+
+    <li>
+      <strong>October 2026</strong> —
+      REWRITE Annual Meeting 2026,
+      Cádiz, Spain
+    </li>
   </ul>
 
+  <p class="event-note">
+    I update this list regularly. If you would like to discuss my work,
+    meet during one of these events, or request presentation materials,
+    feel free to contact me by email.
+  </p>
+
+
   <div class="quote">
-    <div class="aksara">ꦈꦫꦶꦥ꧀ ꦆꦏꦸ ꦩꦸꦁ ꦩꦩ꧀ꦥꦶꦂ ꦔꦺꦴꦩ꧀ꦧꦺ</div>
-    Life is just stopping by for a drink.<br>
-    - Javanese proverb (from my mother tongue)
+
+    <div class="aksara">
+      ꦈꦫꦶꦥ꧀ ꦆꦏꦸ ꦩꦸꦁ ꦩꦩ꧀ꦥꦶꦂ ꦔꦺꦴꦩ꧀ꦧꦺ
+    </div>
+
+    “Life is just stopping by for a drink.”<br>
+    — Javanese proverb, from my mother tongue
+
     <br><br>
-    To me, it means that life is only a very brief stop. We are all just short-term passengers, passing through a specific moment in time and space. What matters is how we use that time, to be at peace with ourselves, to help others and to contribute to the things we care about.
+
+    To me, it is a reminder that life is a very brief stop.
+    We are all temporary passengers, passing through a particular moment
+    in time and space. What matters is how we use that time: to be at peace
+    with ourselves, to help others, and to contribute to the things we care about.
+
   </div>
 
+
   <div class="footer">
-    I'm always open to collaborations or a nice chat.<br><br>
-    lily.puspasari@univ-nantes.fr<br>
-    lily.puspasari@etu.univ-nantes.fr
+
+    I'm always happy to hear about potential collaborations,
+    research ideas, or simply to have a good conversation.
+
+    <br><br>
+
+    <a href="mailto:lily.puspasari@univ-nantes.fr">
+      lily.puspasari@univ-nantes.fr
+    </a>
+
+    <br>
+
+    <a href="mailto:lily.puspasari@etu.univ-nantes.fr">
+      lily.puspasari@etu.univ-nantes.fr
+    </a>
+
+    <br><br>
+
+    <div class="social-links">
+
+      <a
+        href="https://www.linkedin.com/in/slily/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+      <a
+        href="https://orcid.org/0000-0001-6336-0167"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        ORCID
+      </a>
+
+      <a
+        href="https://rewriteproject.eu/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        REWRITE EU
+      </a>
+
+    </div>
+
   </div>
 
 </div>
 
 </body>
 </html>
+```
